@@ -10,7 +10,7 @@ In C++ (and most other languages), multi-dimensional arrays are stored in row-ma
 x[0][0], x[0][1], x[0][2], x[0][3], x[1][0], x[1][1], x[1][2], x[1][3], ..., x[3][3]
 ```
 
-### Impact of Loop Order on Cache Efficiency
+## Impact of Loop Order on Cache Efficiency
 The order in which you access the elements of the array can significantly impact cache performance.
 
 * Row-major order access (optimal for caches):
@@ -38,5 +38,6 @@ Here, the innermost loop variable (i) iterates over rows, while the outer loop v
 
 When you run both versions of the code, you may observe that the execution time for the row-major order access (x[i][j]) is generally faster compared to the column-major order access (x[j][i]). This difference is due to better cache utilization in the row-major order case.
 
+## Code illustration
 The video below shows how the way we define a loop can effect the workload of the cache memory.
 ![Alt text](cache_memory.gif)
